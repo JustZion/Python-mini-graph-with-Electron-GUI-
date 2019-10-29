@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+    body {
+      margin: 0px; 
+      padding: 0px;
+    }
+    #title_head {
+      background-color: #5F5F5F; color: #F1F1F1;
+      margin: 0px 0px 25px 0px;
+      padding: 20px 10px 20px 10px;
+      text-align: center;
+    }
+    .main_div {
+      text-align: center; background: #F1F1F1; 
+      margin: 0px 20px; 
+      padding: 10px 0px 15px 0px;
+      border-top: 0px solid #4CAF50;
+    }
+    .x_div {
+      display: inline-block;
+      width: 100%
+    }
+    #x_title {
+      float: left;
+      margin-left: 25px;
+    }
+    #first {
+      margin-top: 13px;
+      margin-left: 23px;
+      height: 20px;
+    }
+    .y_div {
+      display: inline-block;
+      width: 100%
+    }
+    #y_title {
+      float: left;
+      margin-left: 25px;
+    }
+    #second {
+      margin-top: 13px;
+      margin-left: 23px;
+      width: 175px; height: 25px;
+    }
+    .graph_div {
+      display: inline-block;
+      width: 100%
+    }
+    #graph_title {
+      float: left;
+      margin-left: 25px;
+    }
+    #third {
+      margin-top: 13px;
+      margin-left: 14x;
+      height: 25px; width: 175px;
+    }
+    .result_b {
+      background: #757575;
+      padding: 10px; color: white;
+    }
+    .clear_b {
+      background: #4CAF50;
+      padding: 10px; color: white;
+    }
+    #result_h {
+      margin-top: 13px;
+      margin-bottom: 0px;
+      color: red;
+    }
+    #result {
+     color: black;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Python and Electron Graph</title>
+  </head>
+  <body>
+    <h1 id='title_head'><title>This is a graph made with Electron GUI
+      and powered by Python
+    </title>Python and Electron graph</h1>
+    <div class="main_div">
+        <div class="x_div">
+            <p id="x_title">Value of X</p>
+            <input id="first" placeholder="From 0 to value of x"></input>
+        </div>
+        <div class="y_div">
+            <p id="y_title">Value of Y</p>
+            <select id="second">
+                <option value="2">Square (x)</option>
+                <option value="3">Tripple (x)</option>
+                <option value="4">Quardriple (x)</option>
+            </select>
+        </div>
+        <div class="graph_div">
+            <p id="graph_title">Type of Graph</p>
+            <select id="third">
+                <option value="1">Line Graph</option>
+                <option value="2">Scatter Graph</option>
+                <option value="3">Bar Graph</option>
+            </select>
+        </div>
+        <br /><br />
+        <button class="result_b">Show the graph</button>
+        <button class="clear_b">Clear</button>
+        <div id="result_h">Status: <span id="result"></span></div>
+    </div>
+    
+  </body>
+  <script>
+    require('./renderer.js')
+  </script>
